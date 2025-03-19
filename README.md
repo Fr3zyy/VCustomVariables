@@ -46,6 +46,31 @@ stringTest.Value = "Goodbye world!";
 Console.WriteLine(stringTest); // Goodbye world!
 ```
 
+### VBool Example
+
+```csharp
+// Create a VBool variable
+VBool boolTest = true;
+
+// Listen for value changes
+boolTest.OnValueChanged += (oldValue, newValue) =>
+{
+    Console.WriteLine($"{oldValue} -> {newValue}");
+};
+
+// Change the value (triggers the event)
+boolTest.Value = false;
+
+// Use as a bool (implicit conversion)
+if (boolTest)
+{
+    Console.WriteLine("hii");
+}
+
+Console.WriteLine(boolTest); // "False"
+```
+
+
 ## Installation
 
 Clone the project from GitHub:
@@ -60,7 +85,7 @@ Or add the project directly as a reference.
 
 Planned variable types:
 - VString -> Finished
-- VBool
+- VBool -> Finished
 - VFloat
 - VDouble
 - VList

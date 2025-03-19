@@ -12,9 +12,12 @@ namespace VCustomVariables.Variables
             get => _value;
             set
             {
-                string oldValue = _value;
-                _value = value;
-                OnValueChanged?.Invoke(oldValue, _value);
+                if (value != _value)
+                {
+                    string oldValue = _value;
+                    _value = value;
+                    OnValueChanged?.Invoke(oldValue, _value);
+                }
             }
         }
         public VString(string value)

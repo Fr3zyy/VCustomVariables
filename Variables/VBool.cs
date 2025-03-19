@@ -1,34 +1,34 @@
 namespace VCustomVariables.Variables
 {
-    public class VInt
+    public class VBool
     {
-        private int _value;
+        private bool _value;
 
-        public delegate void ValueChanged(int oldValue, int newValue);
+        public delegate void ValueChanged(bool oldValue, bool newValue);
         public event ValueChanged? OnValueChanged;
 
-        public int Value
+        public bool Value
         {
             get => _value;
             set
             {
                 if (value != _value)
                 {
-                    int oldValue = _value;
+                    bool oldValue = _value;
                     _value = value;
                     OnValueChanged?.Invoke(oldValue, _value);
                 }
             }
         }
-        public VInt(int value)
+        public VBool(bool value)
         {
             _value = value;
         }
-        public static implicit operator VInt(int value)
+        public static implicit operator VBool(bool value)
         {
-            return new VInt(value);
+            return new VBool(value);
         }
-        public static implicit operator int(VInt value)
+        public static implicit operator bool(VBool value)
         {
             return value.Value;
         }

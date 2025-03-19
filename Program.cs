@@ -17,11 +17,26 @@
 
 // Console.WriteLine(intTest);
 
-VString stringTest = "Hello world!";
-stringTest.OnValueChanged += (oldValue, newValue) =>
+// VString stringTest = "Hello world!";
+// stringTest.OnValueChanged += (oldValue, newValue) =>
+// {
+//     Console.WriteLine($"{oldValue} -> {newValue}");
+// };
+
+// stringTest.Value = "Goodbye world!";
+// Console.WriteLine(stringTest);
+
+VBool boolTest = true;
+boolTest.OnValueChanged += (oldValue, newValue) =>
 {
     Console.WriteLine($"{oldValue} -> {newValue}");
 };
 
-stringTest.Value = "Goodbye world!";
-Console.WriteLine(stringTest);
+boolTest.Value = true;
+
+if (boolTest)
+{
+    Console.WriteLine("qwadqwd");
+}
+
+Console.WriteLine(boolTest);
