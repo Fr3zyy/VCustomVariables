@@ -2,7 +2,6 @@
 
 This project is a work I created to improve my C# skills. In the project, I developed a structure to make the variables more flexible and customisable. When the value of the variable changes, an event containing the previous (oldValue) and new (newValue) values is triggered and feedback is provided. Of course, I will add more features in the future.
 
-
 ## Usage
 
 ### VInt Example
@@ -14,7 +13,7 @@ VInt number = 123;
 // Listen for value changes
 number.OnValueChanged += (oldValue, newValue) =>
 {
-        Console.WriteLine($"Value changed: {oldValue} -> {newValue}");
+    Console.WriteLine($"Value changed: {oldValue} -> {newValue}");
 };
 
 // Change the value (triggers the event)
@@ -25,7 +24,7 @@ number.Value = 500;
 // Use as an int (implicit conversion)
 if (number == 500)
 {
-        Console.WriteLine("Value is equal to 500");
+    Console.WriteLine("Value is equal to 500");
 }
 
 Console.WriteLine(number); // "500"
@@ -70,6 +69,41 @@ if (boolTest)
 Console.WriteLine(boolTest); // "False"
 ```
 
+### VFloat Example
+
+```csharp
+// Create a VFloat variable
+VFloat floatTest = 1.23f;
+
+// Listen for value changes
+floatTest.OnValueChanged += (oldValue, newValue) =>
+{
+    Console.WriteLine($"{oldValue} -> {newValue}");
+};
+
+// Change the value (triggers the event)
+floatTest.Value = 4.56f;
+
+Console.WriteLine(floatTest); // "4.56"
+```
+
+### VDouble Example
+
+```csharp
+// Create a VDouble variable
+VDouble doubleTest = 1.23;
+
+// Listen for value changes
+doubleTest.OnValueChanged += (oldValue, newValue) =>
+{
+    Console.WriteLine($"{oldValue} -> {newValue}");
+};
+
+// Change the value (triggers the event)
+doubleTest.Value = 4.56;
+
+Console.WriteLine(doubleTest); // "4.56"
+```
 
 ## Installation
 
@@ -86,8 +120,8 @@ Or add the project directly as a reference.
 Planned variable types:
 - VString -> Finished
 - VBool -> Finished
-- VFloat
-- VDouble
+- VFloat -> Finished
+- VDouble -> Finished
 - VList
 - VDictionary
 

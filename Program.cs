@@ -26,17 +26,35 @@
 // stringTest.Value = "Goodbye world!";
 // Console.WriteLine(stringTest);
 
-VBool boolTest = true;
-boolTest.OnValueChanged += (oldValue, newValue) =>
-{
-    Console.WriteLine($"{oldValue} -> {newValue}");
-};
+// VBool boolTest = true;
+// boolTest.OnValueChanged += (oldValue, newValue) =>
+// {
+//     Console.WriteLine($"{oldValue} -> {newValue}");
+// };
 
-boolTest.Value = true;
+// boolTest.Value = true;
 
-if (boolTest)
-{
-    Console.WriteLine("qwadqwd");
-}
+// if (boolTest)
+// {
+//     Console.WriteLine("qwadqwd");
+// }
 
-Console.WriteLine(boolTest);
+// Console.WriteLine(boolTest);
+
+// VFloat floatTest = 123.456f;
+// floatTest.OnValueChanged += (oldValue, newValue) =>
+// {
+//     Console.WriteLine($"{oldValue} -> {newValue}");
+// };
+
+// floatTest.Value = 500.123f;
+// Console.WriteLine(floatTest);
+
+// VDouble doubleTest = 123.456;
+// doubleTest.OnValueChanged += (oldValue, newValue) =>
+// {
+//     Console.WriteLine($"{oldValue} -> {newValue}");
+// };
+
+// doubleTest.Value = 500.123;
+// Console.WriteLine(doubleTest);
