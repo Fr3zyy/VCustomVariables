@@ -31,6 +31,21 @@ if (number == 500)
 Console.WriteLine(number); // "500"
 ```
 
+### VString Example
+```csharp
+// Create a VString variable
+VString stringTest = "Hello world!";
+
+// Listen for value changes
+stringTest.OnValueChanged += (oldValue, newValue) =>
+{
+    Console.WriteLine($"{oldValue} -> {newValue}");
+};
+
+stringTest.Value = "Goodbye world!";
+Console.WriteLine(stringTest); // Goodbye world!
+```
+
 ## Installation
 
 Clone the project from GitHub:
@@ -44,7 +59,7 @@ Or add the project directly as a reference.
 ## Future Features
 
 Planned variable types:
-- VString
+- VString -> Finished
 - VBool
 - VFloat
 - VDouble
