@@ -1,6 +1,6 @@
 # VCustomVariables
 
-VCustomVariables is a library that provides custom variable types in C#. This library offers wrapper classes that trigger events when the values of variables change, making your code reactive.
+VCustomVariables is a personal project I created to improve my C# skills. This project provides custom variable types with wrapper classes that trigger events when the values of variables change, making the code reactive.
 
 
 ## Usage
